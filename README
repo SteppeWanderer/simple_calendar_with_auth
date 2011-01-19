@@ -1,2 +1,5 @@
-before launch need
+Create in MySQL database
+bundle install
 rake db:migrate
+
+
