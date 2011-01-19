@@ -1,0 +1,11 @@
+<!-- Probably move the stylesheet to you layout. Also make sure you include the javascript. -->
+<%= stylesheet_link_tag "event_calendar" %>
+<%= link_to("Logout", {:controller => "sessions",:action => 'destroy'})%>
+<h1>Calendar for <%= session[:name]%></h1>
+<br />
+<%= link_to("New Event", :action => 'new')%><br />
+<%= link_to("New Complex Event", :action => 'complex_new')%>
+<%= raw(event_calendar) %>
+
+
+

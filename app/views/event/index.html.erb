@@ -1,0 +1,14 @@
+<h1>Event</h1>
+<%= @test %>
+<%= link_to("Back to calendar", :controller => "calendar", :action => "index")%>
+<table>
+<tr><td>Name: </td>
+    <td><%= @event.name%></td>
+</tr><br />
+<!--<tr><td>Start at: </td>
+    <td><%= @event.start_at.strftime("%d %B %Y")%></td>
+</tr><br />-->
+<tr><td>End_at: </td>
+    <td><%= @event.end_at.strftime("%d %B %Y")%></td>
+</tr><br />
+</table>

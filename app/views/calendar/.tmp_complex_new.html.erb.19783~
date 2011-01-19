@@ -1,0 +1,23 @@
+<!-- Probably move the stylesheet to you layout. Also make sure you include the javascript. -->
+<%= stylesheet_link_tag "event_calendar" %>
+
+<h1>New event</h1>
+<%= link_to("Back to calendar", :action => "index")%>
+
+<%= form_for(:new_complex_event, :url => {:action => 'create_complex_event'}) do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= check_box_tag(:everyWeek)%>Repeat every week<br />
+    <%= select_tag(:repeat, options_for_select([["Every Monday",1],["Every Tuesday",2], ["Every Wednesday",3], ["Every Thursday",4], ["Every Friday",5], ["Every Saturday",6], ["Every Sunday",0]])) %>
+    <%= select_tag(:number, options_for_select(1..50)) %> times
+  </p>
+  <p>
+    <%= check_box_tag(:everyMonth)%>Repeat every month<br />
+    On <%= select_tag(:data, options_for_select(1..31)) %> day during
+	<%= select_tag(:numberMonth, options_for_select(1..20)) %> months
+  </p>
+  <p><%= submit_tag ("create") %></p>
+<% end %>
