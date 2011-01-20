@@ -33,4 +33,6 @@ gem 'nifty-generators', :group => :development
 gem "mocha", :group => :test
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'event-calendar', :require => 'event_calendar'
+gem 'jquery-rails'
+
 
