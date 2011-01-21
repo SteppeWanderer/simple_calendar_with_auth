@@ -1,0 +1,4 @@
+It is necessary to create database in MySQL with name: newtest_development
+Before launch, you must input 2 commands:
+bundle install
+rake db:migrate
